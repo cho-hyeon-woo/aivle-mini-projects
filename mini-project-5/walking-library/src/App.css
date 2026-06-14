@@ -1,0 +1,212 @@
+
+:root {
+  --primary: #ffa042;
+  --primary-hover: #f59e0b;
+  --primary-light: #fff7ed;
+  --primary-shadow: rgba(245, 158, 11, 0.18);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.07);
+  --border-color: #ddd;
+  --text-primary: #333;
+  --text-secondary: #555;
+  --text-muted: #888;
+}
+
+body {
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em; 
+}
+
+.app-shell {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.brand-panel {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.brand-panel:hover {
+  border-color: #f59e0b !important;
+  box-shadow: 0 14px 30px rgba(245, 158, 11, 0.12);
+  transform: translateY(-2px);
+}
+
+div::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+input,
+select,
+textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #94a3b8 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
+  outline: none;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.book-card {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.18s ease,
+              border-color 0.18s ease,
+              background-color 0.18s ease !important;
+  will-change: transform;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  border-color: #f59e0b !important;
+  background-color: #fffaf0 !important;
+}
+
+.mypage-book-item {
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.mypage-book-item:hover {
+  background-color: #fff7ed !important;
+  border-color: #fb923c !important;
+  box-shadow: 0 8px 18px rgba(251, 146, 60, 0.14);
+  transform: translateX(4px);
+}
+
+.detail-link {
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.detail-link:hover {
+  color: #f97316 !important;
+  text-decoration-color: currentColor;
+}
+
+button {
+  transition: background-color 0.2s ease-in-out,
+              border-color 0.2s ease-in-out,
+              color 0.2s ease-in-out,
+              box-shadow 0.2s ease-in-out,
+              transform 0.2s ease-in-out !important;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  filter: brightness(0.94);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+}
+
+button:active {
+  transform: scale(0.96) !important;
+  box-shadow: none;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.38);
+  outline-offset: 2px;
+}
+
+.nav-tab:hover {
+  background-color: #fff7ed !important;
+  border-color: #fb923c !important;
+  color: #9a3412 !important;
+}
+
+.search-button:hover {
+  background-color: #f59e0b !important;
+}
+
+.delete-button:hover {
+  background: #fecaca !important;
+  color: #b91c1c !important;
+}
+
+.edit-button:hover {
+  background: #334155 !important;
+}
+
+.close-button:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 맨 아래에 그대로 추가하세요 */
+@keyframes wheatSway {
+  0% {
+    transform: scale(1.05) rotate(0deg) translateX(0px);
+  }
+  50% {
+    transform: scale(1.07) rotate(1deg) translateX(8px);
+  }
+  100% {
+    transform: scale(1.05) rotate(0deg) translateX(0px);
+  }
+}
+
+.animate-wheat-sway {
+  animation: wheatSway 20s ease-in-out infinite;
+  transform-origin: bottom center;
+}
